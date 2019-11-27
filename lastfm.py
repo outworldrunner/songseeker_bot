@@ -21,5 +21,6 @@ def get_similar_track(artist, track, amount=5):
     track = network.get_track(artist, track)
 
     similars = track.get_similar()
+    print(similars)
     for similar in similars[:amount]:
         yield str(similar.item)
